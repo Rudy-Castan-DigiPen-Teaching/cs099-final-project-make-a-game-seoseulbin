@@ -89,8 +89,8 @@ function preload() {
   how_to_2 = loadImage("images/how_to_2.png");
   how_to_3 = loadImage("images/how_to_3.png");
 
-  bgm_1 = loadSound("backgroundmusic.mp3");
-  bgm_2 = loadSound("in_game.mp3");
+  bgm_1 = loadSound("music/backgroundmusic.mp3");
+  bgm_2 = loadSound("music/in_game.mp3");
 }
 
 function setup() {
