@@ -12,12 +12,12 @@ let hero_e1;
 let hero_e2;
 let hero_e3;
 let CurrentScreen = 0;
-let Start_button_x;
-let Start_button_y;
+let game_button_x;
+let game_button_y;
 let button_width;
 let button_height;
-let story_button_x;
-let story_button_y;
+let how_to_button_x;
+let how_to_button_y;
 let spaceship1_x;
 let spaceship1_y;
 let spaceship2_x;
@@ -91,6 +91,13 @@ function preload() {
 
   bgm_1 = loadSound("music/backgroundmusic.mp3");
   bgm_2 = loadSound("music/in_game.mp3");
+
+  sound_1 = loadSound("sound/clickSound.wav");
+  sound_2 = loadSound("sound/lifeSound.wav");
+  sound_3 = loadSound("sound/gunSound.wav");
+  sound_4 = loadSound("sound/itemChoiceSound.wav");
+  sound_5 = loadSound("sound/nextButtonSound.wav");
+  sound_6 = loadSound("sound/heroChoiceSound.wav");
 }
 
 function setup() {
@@ -98,15 +105,15 @@ function setup() {
   imageMode(CENTER);
   rectMode(CENTER);
   textAlign(CENTER);
-  Start_button_x = 340;
-  Start_button_y = (height * 2) / 3 + 170;
+  game_button_x = 340;
+  game_button_y = (height * 2) / 3 + 170;
   button_width = 290;
   button_height = 110;
   space_width = 380;
   space_height = 380;
-  story_button_x = Start_button_x + button_width + 70;
-  story_button_y = (height * 2) / 3 + 170;
-  credits_button_x = story_button_x + button_width + 70;
+  how_to_button_x = game_button_x + button_width + 70;
+  how_to_button_y = (height * 2) / 3 + 170;
+  credits_button_x = how_to_button_x + button_width + 70;
   credits_button_y = (height * 2) / 3 + 170;
   spaceship1_x = width / 5;
   spaceship1_y = (height * 2) / 3 - 30;
@@ -147,35 +154,34 @@ function draw() {
     case MAIN_MENU:
       main_menu();
       break;
-    case START_SCREEN_1_0:
-      start_screen_1_0();
+    case GAME_SCREEN_1_0:
+      game_screen_1_0();
       break;
-    case START_SCREEN_1_0_1:
-      start_screen_1_0_1();
+    case GAME_SCREEN_1_0_1:
+      game_screen_1_0_1();
       break;
-    case START_SCREEN_1_1:
-      start_screen_1_1();
+    case GAME_SCREEN_1_1:
+      game_screen_1_1();
       break;
-    case STORY_SCREEN_2_0:
-      story_screen_2_0();
+    case HOW_TO_SCREEN_2_0:
+      how_to_screen_2_0();
       break;
-    case STORY_SCREEN_2_1:
-      story_screen_2_1();
+    case HOW_TO_SCREEN_2_1:
+      how_to_screen_2_1();
       break;
-    case STORY_SCREEN_2_2:
-      story_screen_2_2();
+    case HOW_TO_SCREEN_2_2:
+      how_to_screen_2_2();
       break;
-    case OPTIONS_SCREEN_3_0:
-      option_screen_3_0();
+    case CREDIT_SCREEN_3_0:
+      credit_screen_3_0();
       break;
     case FINISH_SCREEN:
       finish_screen();
-
       break;
   }
   switch (CurrentScreen) {
-    case STORY_SCREEN_2_0:
-    case STORY_SCREEN_2_1:
+    case HOW_TO_SCREEN_2_0:
+    case HOW_TO_SCREEN_2_1:
       push();
       fill(0);
       stroke("gold");
@@ -196,28 +202,30 @@ function draw() {
 function mousePressed() {
   switch (CurrentScreen) {
     case MAIN_MENU:
-      //start
+      //game
       {
         const mouse_is_within_x_range =
-          mouseX >= Start_button_x - button_width / 2 &&
-          mouseX < Start_button_x + button_width / 2;
+          mouseX >= game_button_x - button_width / 2 &&
+          mouseX < game_button_x + button_width / 2;
         const mouse_is_within_y_range =
-          mouseY >= Start_button_y - button_height / 2 &&
-          mouseY < Start_button_y + button_height / 2;
+          mouseY >= game_button_y - button_height / 2 &&
+          mouseY < game_button_y + button_height / 2;
         if (mouse_is_within_x_range && mouse_is_within_y_range) {
-          CurrentScreen = START_SCREEN_1_0;
+          CurrentScreen = GAME_SCREEN_1_0;
+          sound_1.play();
         }
       }
-      //story
+      //how_to
       {
         const mouse_is_within_x_range =
-          mouseX >= story_button_x - button_width / 2 &&
-          mouseX < story_button_x + button_width / 2;
+          mouseX >= how_to_button_x - button_width / 2 &&
+          mouseX < how_to_button_x + button_width / 2;
         const mouse_is_within_y_range =
-          mouseY >= story_button_y - button_height / 2 &&
-          mouseY < story_button_y + button_height / 2;
+          mouseY >= how_to_button_y - button_height / 2 &&
+          mouseY < how_to_button_y + button_height / 2;
         if (mouse_is_within_x_range && mouse_is_within_y_range) {
-          CurrentScreen = STORY_SCREEN_2_0;
+          CurrentScreen = HOW_TO_SCREEN_2_0;
+          sound_1.play();
         }
       }
       //credits
@@ -229,11 +237,12 @@ function mousePressed() {
           mouseY >= credits_button_y - button_height / 2 &&
           mouseY < credits_button_y + button_height / 2;
         if (mouse_is_within_x_range && mouse_is_within_y_range) {
-          CurrentScreen = OPTIONS_SCREEN_3_0;
+          CurrentScreen = CREDIT_SCREEN_3_0;
+          sound_1.play();
         }
       }
       break;
-    case START_SCREEN_1_0:
+    case GAME_SCREEN_1_0:
       {
         menu_button_clicked();
         //spaceship1
@@ -246,7 +255,8 @@ function mousePressed() {
             mouseY < spaceship1_y + space_height / 2;
           if (mouse_is_within_x_range && mouse_is_within_y_range) {
             hero = new HERO(1, width / 2, height - 150);
-            CurrentScreen = START_SCREEN_1_0_1;
+            CurrentScreen = GAME_SCREEN_1_0_1;
+            sound_6.play();
           }
         }
         //spaceship2
@@ -259,7 +269,8 @@ function mousePressed() {
             mouseY < spaceship2_y + space_height / 2;
           if (mouse_is_within_x_range && mouse_is_within_y_range) {
             hero = new HERO(2, width / 2, height - 150);
-            CurrentScreen = START_SCREEN_1_0_1;
+            CurrentScreen = GAME_SCREEN_1_0_1;
+            sound_6.play();
           }
         }
         //spaceship3
@@ -272,16 +283,17 @@ function mousePressed() {
             mouseY < spaceship3_y + space_height / 2;
           if (mouse_is_within_x_range && mouse_is_within_y_range) {
             hero = new HERO(3, width / 2, height - 150);
-            CurrentScreen = START_SCREEN_1_0_1;
+            CurrentScreen = GAME_SCREEN_1_0_1;
+            sound_6.play();
           }
         }
       }
       break;
 
-    case START_SCREEN_1_0:
+    case GAME_SCREEN_1_0:
       menu_button_clicked();
       break;
-    case START_SCREEN_1_0_1:
+    case GAME_SCREEN_1_0_1:
       {
         menu_button_clicked();
         //plus_time
@@ -294,9 +306,10 @@ function mousePressed() {
             mouseY < plus_time_y + item_height / 2;
           if (mouse_is_within_x_range && mouse_is_within_y_range) {
             items = new ITEM(1, width - 80, 180);
-            CurrentScreen = START_SCREEN_1_1;
+            CurrentScreen = GAME_SCREEN_1_1;
             bgm_1.stop();
             bgm_2.loop();
+            sound_4.play();
           }
         }
         //plus_hp
@@ -309,9 +322,10 @@ function mousePressed() {
             mouseY < plus_hp_y + item_height / 2;
           if (mouse_is_within_x_range && mouse_is_within_y_range) {
             items = new ITEM(2, width - 80, 180);
-            CurrentScreen = START_SCREEN_1_1;
+            CurrentScreen = GAME_SCREEN_1_1;
             bgm_1.stop();
             bgm_2.loop();
+            sound_4.play();
           }
         }
         //plus_bullet_capacity
@@ -324,29 +338,18 @@ function mousePressed() {
             mouseY < plus_bullet_capacity_y + item_height / 2;
           if (mouse_is_within_x_range && mouse_is_within_y_range) {
             items = new ITEM(3, width - 90, 180);
-            CurrentScreen = START_SCREEN_1_1;
+            CurrentScreen = GAME_SCREEN_1_1;
             bgm_1.stop();
             bgm_2.loop();
+            sound_4.play();
           }
         }
       }
       break;
-    case START_SCREEN_1_1:
+    case GAME_SCREEN_1_1:
       menu_button_clicked();
       break;
-    case STORY_SCREEN_2_0:
-      menu_button_clicked();
-      if (
-        sqrt(
-          (mouseX - pos_X) * (mouseX - pos_X) +
-            (mouseY - pos_Y) * (mouseY - pos_Y)
-        ) <=
-        length / 2
-      ) {
-        CurrentScreen = STORY_SCREEN_2_1;
-      }
-      break;
-    case STORY_SCREEN_2_1:
+    case HOW_TO_SCREEN_2_0:
       menu_button_clicked();
       if (
         sqrt(
@@ -355,13 +358,27 @@ function mousePressed() {
         ) <=
         length / 2
       ) {
-        CurrentScreen = STORY_SCREEN_2_2;
+        sound_5.play();
+        CurrentScreen = HOW_TO_SCREEN_2_1;
       }
       break;
-    case STORY_SCREEN_2_2:
+    case HOW_TO_SCREEN_2_1:
+      menu_button_clicked();
+      if (
+        sqrt(
+          (mouseX - pos_X) * (mouseX - pos_X) +
+            (mouseY - pos_Y) * (mouseY - pos_Y)
+        ) <=
+        length / 2
+      ) {
+        sound_5.play();
+        CurrentScreen = HOW_TO_SCREEN_2_2;
+      }
+      break;
+    case HOW_TO_SCREEN_2_2:
       menu_button_clicked();
       break;
-    case OPTIONS_SCREEN_3_0:
+    case CREDIT_SCREEN_3_0:
       menu_button_clicked();
       break;
   }
@@ -376,6 +393,7 @@ function menu_button_clicked() {
     mouseY < menu_button_Y + menu_button_length / 2;
   if (mouse_is_within_x_range && mouse_is_within_y_range) {
     CurrentScreen = MAIN_MENU;
+    sound_1.play();
     bgm_2.stop();
     bgm_1.stop();
     bgm_1.loop();
@@ -415,21 +433,21 @@ function main_menu() {
   stroke(0);
   strokeWeight(20);
   strokeJoin(ROUND);
-  rect(Start_button_x, Start_button_y, button_width, button_height);
-  rect(story_button_x, story_button_y, button_width, button_height);
+  rect(game_button_x, game_button_y, button_width, button_height);
+  rect(how_to_button_x, how_to_button_y, button_width, button_height);
   rect(credits_button_x, credits_button_y, button_width, button_height);
   pop();
   push();
   fill(0);
   textStyle(BOLD);
   textSize(60);
-  text("Start", Start_button_x, Start_button_y + 20);
-  text("How to", story_button_x, story_button_y + 20);
+  text("Game", game_button_x, game_button_y + 20);
+  text("How to", how_to_button_x, how_to_button_y + 20);
   text("Credit", credits_button_x, credits_button_y + 20);
   pop();
 }
 
-function start_screen_1_0() {
+function game_screen_1_0() {
   push();
   fill(176, 196, 222, 200);
   stroke(112, 128, 144);
@@ -508,7 +526,7 @@ function start_screen_1_0() {
   );
 }
 
-function start_screen_1_0_1() {
+function game_screen_1_0_1() {
   push();
   fill(176, 196, 222, 200);
   stroke(112, 128, 144);
@@ -547,7 +565,7 @@ function start_screen_1_0_1() {
   );
 }
 
-function start_screen_1_1() {
+function game_screen_1_1() {
   image(
     back_to_menu,
     menu_button_X,
@@ -610,7 +628,6 @@ function start_screen_1_1() {
     obstacles[i].update();
     obstacles[i].draw();
     if (obstacles[i].hp <= 0) {
-      score_amount += obstacles[i].obstacle_index + 1;
       obstacles.splice(i, 1);
     }
   }
@@ -639,7 +656,7 @@ function start_screen_1_1() {
   pop();
 }
 
-function story_screen_2_0() {
+function how_to_screen_2_0() {
   image(background_image, width / 2, height / 2, width * 1.6, height * 1.6);
   background(3, 70, 143, 200);
   push();
@@ -656,7 +673,7 @@ function story_screen_2_0() {
   );
 }
 
-function story_screen_2_1() {
+function how_to_screen_2_1() {
   image(background_image, width / 2, height / 2, width * 1.6, height * 1.6);
   background(3, 70, 143, 200);
   push();
@@ -673,7 +690,7 @@ function story_screen_2_1() {
   );
 }
 
-function story_screen_2_2() {
+function how_to_screen_2_2() {
   image(background_image, width / 2, height / 2, width * 1.6, height * 1.6);
   background(3, 70, 143, 200);
   push();
@@ -690,7 +707,7 @@ function story_screen_2_2() {
   );
 }
 
-function option_screen_3_0() {
+function credit_screen_3_0() {
   image(background_image, width / 2, height / 2, width * 1.6, height * 1.6);
   background(3, 70, 143, 170);
   push();
