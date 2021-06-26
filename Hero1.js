@@ -62,9 +62,8 @@ class HERO {
     //shoot
     if (keyIsPressed == true && keyCode == 32) {
       if (this.wasShot == false) {
-        print("Shoot!");
         BULLETS2.push(new BULLET(this.x, this.y));
-        print(BULLETS2.length);
+        sound_3.play()
       }
       this.wasShot = true;
     } else {
@@ -250,6 +249,7 @@ class HERO {
             this.y + this.flight_height / 2)
       ) {
         this.hp--;
+        sound_2.play()
         obstacles_array.splice(i, 1);
         return true;
       }
