@@ -22,6 +22,8 @@ class OBSTACLE {
 
   update() {
     this.position_y += this.y_velocity;
+    if(obstacle_index == 0){
+    }
   }
 
   draw() {
