@@ -63,6 +63,10 @@ class HERO {
     if (keyIsPressed == true && keyCode == 32) {
       if (this.wasShot == false) {
         BULLETS2.push(new BULLET(this.x, this.y));
+        bullet_amount -=1
+        if(bullet_amount <= 0){
+          bullet_amount = 0
+        }
         sound_3.play()
       }
       this.wasShot = true;
