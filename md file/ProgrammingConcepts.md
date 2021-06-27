@@ -130,7 +130,8 @@ if (this.x - this.width / 2 < 0) {
 
 *5) Loops*    
 --------------
- *What : for, while, break, etc.. or .loop()         
+ *What : Loops is the iteration of what is in the brace.     
+ for, while, break, etc.. or .loop()         
  *Why : They can simply repeat the same code, or they can act like adding a number to each iteration.      
  *How :      
  <pre>
@@ -271,14 +272,15 @@ while (i < 3) {
 
  *7) Classes*    
 --------------
- *What : Class is a type of function that defines variables and methods to generate specific objects.       
+ *What : Class is a type of function that defines variables and methods to generate specific objects. Class is more flexible than Json bringing in objects.          
  *Why : Class allows code to group into objects and to reuse code.       
  *How : 
  <pre>
  <code>
  class CLASS NAME {
-     constructor(){
-
+     constructor(x, y){
+         this.x = x
+         this.y = y
      }
      update() {
 
