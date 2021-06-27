@@ -1,8 +1,9 @@
-programming Document
+Programming Document
 =====================
-Topics
+# *Topics*
 --------------
-# *Shapes*
+*Shapes*    
+--------------
  *What :    
  *Why :     
  *How :     
@@ -11,37 +12,72 @@ Topics
 
  ```
 
-# *Colors*
+*Colors*    
+--------------
  *What   
  *Why    
  *How   
+ *In my Code :     
+ ```java
 
-# *Variables*
+ ```   
+
+*Variables*    
+--------------
  *What   
- *Why   
+ *Why    
  *How   
+ *In my Code :     
+ ```java
 
-# *Conditional Statements*
+ ```   
+
+*Conditional Statements*    
+--------------
  *What   
- *Why   
+ *Why    
  *How   
+ *In my Code :     
+ ```java
 
-# *Loops*
+ ```   
+
+ *Loops*    
+--------------
  *What   
- *Why   
+ *Why    
  *How   
+ *In my Code :     
+ ```java
 
-# *Functions*
+ ```  
+
+ *Functions*    
+--------------
  *What   
- *Why   
+ *Why    
  *How   
+ *In my Code :     
+ ```java
 
-# *Classes*
- *What   
- *Why   
- *How  
+ ```  
 
-# *Arrays*
+ *Classes*    
+--------------
  *What   
- *Why   
+ *Why    
  *How   
+ *In my Code :     
+ ```java
+
+ ``` 
+
+  *Arrays*    
+--------------
+ *What   
+ *Why    
+ *How   
+ *In my Code :     
+ ```java
+
+ ```     
