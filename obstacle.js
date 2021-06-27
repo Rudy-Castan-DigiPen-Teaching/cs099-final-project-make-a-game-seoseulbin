@@ -5,7 +5,7 @@
 
 class OBSTACLE {
   constructor(images_array) {
-    this.obstacle_index = round(random(0, images_array.length - 1));
+    this.obstacle_index = round(random(-0.49, images_array.length - 0.51));
 
     this.position_x = random(0, width);
     this.position_y = 0;
@@ -16,8 +16,7 @@ class OBSTACLE {
     this.y_velocity = this.obstacle_index + 1;
 
     this.image = images_array[this.obstacle_index];
-
-    this.hp = this.obstacle_index;
+    this.hp = this.obstacle_index + 1;
   }
 
   update() {
