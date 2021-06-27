@@ -2,7 +2,7 @@ Programming Document
 =====================
 # *Topics*
 --------------
-*Shapes*    
+*1) Shapes*    
 --------------
  *What :    
  *Why :     
@@ -12,7 +12,7 @@ Programming Document
 
  ```
 
-*Colors*    
+*2) Colors*    
 --------------
  *What   
  *Why    
@@ -22,7 +22,7 @@ Programming Document
 
  ```   
 
-*Variables*    
+*3) Variables*    
 --------------
  *What   
  *Why    
@@ -32,7 +32,7 @@ Programming Document
 
  ```   
 
-*Conditional Statements*    
+*4)Conditional Statements*    
 --------------
  *What   
  *Why    
@@ -42,7 +42,7 @@ Programming Document
 
  ```   
 
- *Loops*    
+ *5) Loops*    
 --------------
  *What   
  *Why    
@@ -52,7 +52,7 @@ Programming Document
 
  ```  
 
- *Functions*    
+ *6) Functions*    
 --------------
  *What   
  *Why    
@@ -62,7 +62,7 @@ Programming Document
 
  ```  
 
- *Classes*    
+ *7) Classes*    
 --------------
  *What   
  *Why    
@@ -72,7 +72,7 @@ Programming Document
 
  ``` 
 
-  *Arrays*    
+  *8) Arrays*    
 --------------
  *What   
  *Why    
