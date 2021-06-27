@@ -774,8 +774,8 @@ function bulletsCollideWithObstacles() {
       ) {
         obstacles[i2].hp--;
         if (obstacles[i2].hp <= 0) {
-          obstacles.splice(i2, 1);
           score_amount += 10 + obstacles[i2].obstacle_index + 1;
+          obstacles.splice(i2, 1);
         }
         BULLETS2.splice(i1, 1);
         return true;
