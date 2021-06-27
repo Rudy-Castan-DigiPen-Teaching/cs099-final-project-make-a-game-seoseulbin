@@ -21,8 +21,9 @@ Theme
 ![ex_screenshot](./../images/theme.jpg)
 
 # Game Scene
+![ex_screenshot](./../images/before_to_start.jpg)
+![ex_screenshot](./../images/before_to_start_2.jpg)
 
-
-#Final 
+# Final 
 ![ex_screenshot](./../images/scene1.jpg)
 ![ex_screenshot](./../images/scene2.jpg)
