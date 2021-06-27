@@ -60,7 +60,7 @@ class HERO {
       this.x += this.direction_right;
     }
     //shoot
-    if (keyIsPressed == true && keyCode == 32) {
+    if (keyIsPressed == true && keyCode == 32 && bullet_amount > 0) {
       if (this.wasShot == false) {
         BULLETS2.push(new BULLET(this.x, this.y));
         bullet_amount -=1
