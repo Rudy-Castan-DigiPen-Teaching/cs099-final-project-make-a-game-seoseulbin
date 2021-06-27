@@ -22,8 +22,9 @@ Theme
 
 # Game Scene
 ![ex_screenshot](./../images/before_to_start.png)
-![ex_screenshot](./../images/before_to_start_2.jpg)
+![ex_screenshot](./../images/before_to_start_2.jpg)   
 
-# Final 
+# Final
+*(After creating the game) *
 ![ex_screenshot](./../images/scene1.jpg)
 ![ex_screenshot](./../images/scene2.jpg)
