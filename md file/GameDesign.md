@@ -6,9 +6,9 @@ High Concept
 # Game name 
     : POP GAME
 # Game Genre
-    : 
+    : Third Person Shooter, TPS or 3PS
 # Game Concept
-    : 
+    : Heroes travel in spacecraft and eat star-shaped bullets. The concept is to save the universe by collecting the bullets and shooting obstacles.Pick your own hero and items and use them to play the game.
 
 Theme
 -------
