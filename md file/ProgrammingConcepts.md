@@ -31,9 +31,9 @@ Programming Document
 --------------
  'What' : (red, orange, yellow, green, etc...), Setting(fill, noFill, stroke, noStroke, etc..)
  'Why' : Each scene of the game can represent a more lively and colorful design.    
- 'How' : fill(), noFill(), stroke(), etc.. 
-  +in ()+    
-     (gray, [alpha]), (R_v, G_v, B_v, [alpha]), (color)      
+ 'How' : fill(), noFill(), stroke(), etc..    
+  +in ()        
+     _(gray, [alpha]), (R_v, G_v, B_v, [alpha]), (color)      
 
  *In my Code :     
  ```java
@@ -51,9 +51,10 @@ Programming Document
 
 *3) Variables*    
 --------------
- *What : It's like memory space for data. There is a risk of error using var.
- *Why : To declare a variable.    
- *How : let A; var = a; const a;
+ *What : It's like memory space for data. There is a risk of error using var.      
+ *Why : To declare a variable.         
+ *How : let A; var = a; const a;      
+
  *In my Code :     
  ```java
     var hero;
@@ -65,9 +66,9 @@ Programming Document
 
 *4)Conditional Statements*    
 --------------
- *What : if, else if, else, switch, case, etc..
- *Why : Use to perform different actions depending on the conditions.        
- *How :     
+ *What : if, else if, else, switch, case, etc..      
+ *Why : Use to perform different actions depending on the conditions.          
+ *How :      
  <pre>
  <code>
  if ( condition1 ) {
@@ -89,8 +90,8 @@ Programming Document
     statement3;
 }
 </code>
-</pre>   
-
+</pre>     
+ 
  *In my Code :     
  ```java
 if (this.x - this.width / 2 < 0) {
@@ -129,9 +130,9 @@ if (this.x - this.width / 2 < 0) {
 
 *5) Loops*    
 --------------
- *What : for, while, break, etc.. or .loop()
- *Why : They can simply repeat the same code, or they can act like adding a number to each iteration.     
- *How :   
+ *What : for, while, break, etc.. or .loop()         
+ *Why : They can simply repeat the same code, or they can act like adding a number to each iteration.      
+ *How :      
  <pre>
  <code>  
 for (let i = 0; i < 3; i++) {
@@ -170,9 +171,9 @@ while (i < 3) {
 
  *6) Functions*    
 --------------
- *What : Function is the most basic building block in a program and is a function that can be reused many times. It also performs one task or value calculation. Also, one function should only allow one thing to do.    
- *Why : The main reason is that reuse is possible. In addition, you can infer what the function name will do and how it will work. Finally, by using functions, unnecessary sources are reduced and readability is improved.    
- *How : Write the name of the function first, the parameter in () and the body in {}.      
+ *What : Function is the most basic building block in a program and is a function that can be reused many times. It also performs one task or value calculation. Also, one function should only allow one thing to do.             
+ *Why : The main reason is that reuse is possible. In addition, you can infer what the function name will do and how it will work. Finally, by using functions, unnecessary sources are reduced and readability is improved.      
+ *How : Write the name of the function first, the parameter in () and the body in {}.        
 
  *In my Code :     
  ```java
@@ -270,8 +271,8 @@ while (i < 3) {
 
  *7) Classes*    
 --------------
- *What : Class is a type of function that defines variables and methods to generate specific objects. 
- *Why : Class allows code to group into objects and to reuse code.     
+ *What : Class is a type of function that defines variables and methods to generate specific objects.       
+ *Why : Class allows code to group into objects and to reuse code.       
  *How : 
  <pre>
  <code>
