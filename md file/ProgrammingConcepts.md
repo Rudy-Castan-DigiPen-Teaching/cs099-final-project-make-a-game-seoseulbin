@@ -355,4 +355,55 @@ while (i < 3) {
 
  ```
 
-  *8) Arrays*    
+*8) Arrays*    
+--------------
+ *What : Array is used to store multiple values in a single variable sequentially.             
+ *Why : This is because array values can have multiple data values at the same time, rather than one. So, array can store multiple data, not single data. It also stores associated data together in variables, making it easier to find data.            
+ *How : It is used with push(), slice(start, end), splice(), map(), etc...       
+ <pre>
+ <code>
+ var fruits = [ 'red', 'orange', 'yellow' ];
+fruits[0];		//red
+
+//*length*
+ var fruits = [ 'red', 'orange', 'yellow' ];
+console.log(fruits.length);	//3  
+</code>
+</pre>
+
+ *In my Code :     
+ ```java
+ //1
+let obstacle_images = [];
+let obstacles = [];
+   function preload(){
+         obstacle_images.push(loadImage("images/obstacle1.png"));
+  obstacle_images.push(loadImage("images/obstacle2.png"));
+  obstacle_images.push(loadImage("images/obstacle3.png"));
+  obstacle_images.push(loadImage("images/obstacle4.png"));
+  obstacle_images.push(loadImage("images/obstacle5.png"));
+   }
+draw(){
+      for (let i = 0; i < obstacles.length; ++i) {
+    obstacles[i].update();
+    obstacles[i].draw();
+    if (obstacles[i].hp <= 0) {
+      obstacles.splice(i, 1);
+    }
+  }
+}
+//2
+let BULLETS2 = [];
+
+  for (let i = 0; i < BULLETS2.length; ++i) {
+    BULLETS2[i].update();
+    BULLETS2[i].draw();
+  }
+//3
+for (let i = 0; i < bullet_count; i++) {
+    BULLETS.push({ x: random(width), y: random(height) });
+  }
+
+
+ ```    
+
