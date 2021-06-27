@@ -4,7 +4,7 @@ Programming Document
 --------------
 *1) Shapes*    
 --------------
- *What : 2D (arc, ellipse, circle, line, quad, etc...), Attributes (rectMode, strokeJoin, strokeWeight, etc...), vertex(), etc..
+ *What : 2D (arc, ellipse, circle, line, quad, etc...), Attributes (rectMode, strokeJoin, strokeWeight, etc...), vertex(), etc..   
  *Why : It can use to make button design and game design.   
  *How : circle(x, y, diameter), rect(x, y, width of the rect, height of the rect)
 
@@ -33,7 +33,8 @@ Programming Document
  'Why' : Each scene of the game can represent a more lively and colorful design.    
  'How' : fill(), noFill(), stroke(), etc.. 
   +in ()+    
-     (gray, [alpha]), (R_v, G_v, B_v, [alpha]), (color)   
+     (gray, [alpha]), (R_v, G_v, B_v, [alpha]), (color)      
+     
  *In my Code :     
  ```java
     push();
