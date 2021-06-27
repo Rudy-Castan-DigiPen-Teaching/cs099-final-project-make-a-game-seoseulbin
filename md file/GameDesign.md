@@ -20,7 +20,8 @@ High Concept
 Theme
 -------
 # Game Theme 
-<img src="images/theme.jpg" width ="450px" height ="300px" alt="Scene"></img><br/>
+screenshot
+![theme] (images/theme.jpg)
 
 # Game Scene
 <img src="images/scene1.jpg" width ="450px" height ="300px" alt="Scene"></img><br/>
