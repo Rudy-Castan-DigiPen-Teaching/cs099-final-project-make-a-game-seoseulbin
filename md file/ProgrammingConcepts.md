@@ -4,9 +4,12 @@ Programming Document
 --------------
 *1) Shapes*    
 --------------
- *What :    
- *Why :     
- *How :     
+ *What : 2D (arc, ellipse, circle, line, quad, etc...),    
+        Attributes (rectMode, strokeCap, strokeWeight, etc...),
+        vertex(), etc..
+          
+ *Why : It can use to mak  
+ *How : arc()    
  *In my Code :     
  ```java
 
@@ -14,9 +17,9 @@ Programming Document
 
 *2) Colors*    
 --------------
- *What   
- *Why    
- *How   
+ *What : (red, orange, yellow, green, etc...), Setting(fill, noFill, stroke, nostroke, etc..)
+ *Why :     
+ *How :     
  *In my Code :     
  ```java
 
