@@ -5,6 +5,8 @@
 
 let obstacle_images = [];
 let obstacles = [];
+let BULLETS = [];
+let BULLETS2 = [];
 let obstacle_index;
 let score_amount = 0;
 let player_timer = 60;
@@ -56,9 +58,7 @@ var moon1;
 let bullet_count = 30;
 let bullet_amount = 20;
 const bullet_size = 16;
-const GRAVITY = 2;
-let BULLETS = [];
-let BULLETS2 = [];
+const gravity = 2;
 let frame_set = 60;
 let spawn_timer = 0;
 let move_x;
@@ -82,6 +82,7 @@ function preload() {
   back_to_menu = loadImage("images/home.png");
   background_image = loadImage("images/background1.png");
   item_background = loadImage("images/item_background.png");
+  number_of_collisions = loadImage("images/number of collisions.png");
   how_to_1 = loadImage("images/how_to_1.png");
   how_to_2 = loadImage("images/how_to_2.png");
   how_to_3 = loadImage("images/how_to_3.png");
@@ -471,8 +472,8 @@ function game_screen_1_0() {
     spaceship1_x + 150,
     spaceship1_y - 90
   );
-  pop()
-  push()
+  pop();
+  push();
   translate(spaceship1_x, spaceship1_y + 50);
   rotate(1);
   image(hero_e1, 0, 0, 150, 280);
@@ -582,7 +583,7 @@ function game_screen_1_1() {
     if (bullet.y > height + bullet_size) {
       bullet.y = -bullet_size;
     } else {
-      bullet.y += GRAVITY;
+      bullet.y += gravity;
     }
   }
   //InTheMoon
@@ -700,6 +701,7 @@ function how_to_screen_2_2() {
     menu_button_length,
     menu_button_length
   );
+  image(number_of_collisions, 380, height - 120, width / 2, height / 5);
 }
 
 function credit_screen_3_0() {
@@ -726,6 +728,7 @@ function finish_screen() {
   background(0);
   push();
   stroke(255);
+  fill(0);
   strokeWeight(13);
   textStyle(BOLD);
   textSize(300);
