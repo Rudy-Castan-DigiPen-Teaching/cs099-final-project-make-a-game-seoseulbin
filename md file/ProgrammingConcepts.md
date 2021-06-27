@@ -1,48 +1,47 @@
-
 programming Document
 =====================
 Topics
 --------------
 # *Shapes*
- *What : 
- *Why : 
- *How :
- *In my Code : 
+ *What :    
+ *Why :     
+ *How :     
+ *In my Code :     
  ```java
 
  ```
 
 # *Colors*
- *What
- *Why
- *How
+ *What   
+ *Why    
+ *How   
 
 # *Variables*
- *What
- *Why
- *How
+ *What   
+ *Why   
+ *How   
 
 # *Conditional Statements*
- *What
- *Why
- *How
+ *What   
+ *Why   
+ *How   
 
 # *Loops*
- *What
- *Why
- *How
+ *What   
+ *Why   
+ *How   
 
 # *Functions*
- *What
- *Why
- *How
+ *What   
+ *Why   
+ *How   
 
 # *Classes*
- *What
- *Why
- *How
+ *What   
+ *Why   
+ *How  
 
 # *Arrays*
- *What
- *Why
- *How
+ *What   
+ *Why   
+ *How   
