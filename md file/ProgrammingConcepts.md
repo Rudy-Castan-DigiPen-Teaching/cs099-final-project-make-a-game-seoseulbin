@@ -32,8 +32,8 @@ Programming Document
  'What' : (red, orange, yellow, green, etc...), Setting(fill, noFill, stroke, noStroke, etc..)
  'Why' : Each scene of the game can represent a more lively and colorful design.    
  'How' : fill(), noFill(), stroke(), etc..    
-  +in ()        
-     _(gray, [alpha]), (R_v, G_v, B_v, [alpha]), (color)      
+  >in ()        
+     >(gray, [alpha]), (R_v, G_v, B_v, [alpha]), (color)      
 
  *In my Code :     
  ```java
@@ -47,7 +47,7 @@ Programming Document
         spaceship3_x + 150,
         spaceship3_y - 90
     );
- ```   
+ ```  
 
 *3) Variables*    
 --------------
