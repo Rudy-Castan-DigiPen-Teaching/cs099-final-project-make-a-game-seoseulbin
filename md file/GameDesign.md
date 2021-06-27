@@ -23,6 +23,9 @@ Theme
 ![ex_screenshot](./../images/theme.jpg)
 
 # Game Scene
-<img src="images/scene1.jpg" width ="450px" height ="300px" alt="Scene"></img><br/>
-<img src="images/scene2.jpg" width ="450px" height ="300px" alt="Scene"></img><br/>
+
+
+#Final 
+![ex_screenshot](./../images/scene1.jpg)
+![ex_screenshot](./../images/scene2.jpg)br/>
 
