@@ -63,11 +63,11 @@ class HERO {
     if (keyIsPressed == true && keyCode == 32 && bullet_amount > 0) {
       if (this.wasShot == false) {
         BULLETS2.push(new BULLET(this.x, this.y));
-        bullet_amount -=1
-        if(bullet_amount <= 0){
-          bullet_amount = 0
+        bullet_amount -= 1;
+        if (bullet_amount <= 0) {
+          bullet_amount = 0;
         }
-        sound_3.play()
+        sound_3.play();
       }
       this.wasShot = true;
     } else {
@@ -253,7 +253,7 @@ class HERO {
             this.y + this.flight_height / 2)
       ) {
         this.hp--;
-        sound_2.play()
+        sound_2.play();
         obstacles_array.splice(i, 1);
         return true;
       }
