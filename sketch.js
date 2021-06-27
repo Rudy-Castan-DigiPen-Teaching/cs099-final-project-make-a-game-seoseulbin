@@ -74,24 +74,19 @@ function preload() {
   hero_e3 = loadImage("images/spaceship3.png");
   life_image = loadImage("images/life_emg.png");
   bullet_capacity_image = loadImage("images/bullet_capacity.png");
-
   obstacle_images.push(loadImage("images/obstacle1.png"));
   obstacle_images.push(loadImage("images/obstacle2.png"));
   obstacle_images.push(loadImage("images/obstacle3.png"));
   obstacle_images.push(loadImage("images/obstacle4.png"));
   obstacle_images.push(loadImage("images/obstacle5.png"));
-
   back_to_menu = loadImage("images/home.png");
   background_image = loadImage("images/background1.png");
   item_background = loadImage("images/item_background.png");
-
   how_to_1 = loadImage("images/how_to_1.png");
   how_to_2 = loadImage("images/how_to_2.png");
   how_to_3 = loadImage("images/how_to_3.png");
-
   bgm_1 = loadSound("music/backgroundmusic.mp3");
   bgm_2 = loadSound("music/in_game.mp3");
-
   sound_1 = loadSound("sound/clickSound.wav");
   sound_2 = loadSound("sound/lifeSound.wav");
   sound_3 = loadSound("sound/gunSound.wav");
@@ -476,6 +471,8 @@ function game_screen_1_0() {
     spaceship1_x + 150,
     spaceship1_y - 90
   );
+  pop()
+  push()
   translate(spaceship1_x, spaceship1_y + 50);
   rotate(1);
   image(hero_e1, 0, 0, 150, 280);
@@ -631,14 +628,12 @@ function game_screen_1_1() {
       obstacles.splice(i, 1);
     }
   }
-
   //bullets
   for (let i = 0; i < BULLETS2.length; ++i) {
     BULLETS2[i].update();
     BULLETS2[i].draw();
   }
   bulletsCollideWithObstacles();
-
   //Hero
   hero.update();
   hero.draw();
