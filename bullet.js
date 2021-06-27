@@ -12,7 +12,7 @@ class BULLET {
   }
 
   update() {
-    this.y -= GRAVITY;
+    this.y -= gravity;
   }
 
   draw() {
